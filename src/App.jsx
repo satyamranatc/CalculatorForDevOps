@@ -404,7 +404,7 @@ function App() {
             <i className="fa-solid fa-sun light-icon"></i>
             <i className="fa-solid fa-moon dark-icon"></i>
           </button>
-          <div className="logo">Nice Calculator</div>
+          <div className="logo">Nice</div>
           <button 
             id="history-toggle" 
             className="icon-btn" 
