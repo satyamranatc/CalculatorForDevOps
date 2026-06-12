@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: 93.127.166.54
+          username: root
+          key: SHA256:rgbdxwHP52+ctKHf0pJmBN/4MT45wj56S4ANF5tfHHw satyamrana@192.168.1.42
+          script: |
+            cd /root/CalculatorForDevOps
+            ./deploy.sh
