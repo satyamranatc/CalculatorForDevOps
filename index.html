@@ -1,105 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellar Calc - Premium Calculator</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stellar Calc - Premium Glassmorphic Calculator</title>
+    <meta name="description" content="Stellar Calc is a premium glassmorphic calculator featuring dual light/dark themes, an interactive history panel, responsive layout, fluid keypress animations, and seamless keyboard input support." />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="dark-theme">
-    <!-- Background glowing shapes for glassmorphism effect -->
-    <div class="glow-bg">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-    </div>
-
-    <div class="calculator-container">
-        <!-- Theme & Utility Header -->
-        <header class="calc-header">
-            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme" title="Toggle Theme">
-                <i class="fa-solid fa-sun light-icon"></i>
-                <i class="fa-solid fa-moon dark-icon"></i>
-            </button>
-            <div class="logo">STELLAR.CALC</div>
-            <button id="history-toggle" class="icon-btn" aria-label="View History" title="View History">
-                <i class="fa-solid fa-history"></i>
-            </button>
-        </header>
-
-        <!-- Calculator Screen -->
-        <div class="calc-screen">
-            <div class="expression-container" id="expression-container">
-                <span id="expression"></span>
-            </div>
-            <div class="display-container">
-                <span class="equals-sign" id="equals-sign">=</span>
-                <span id="display" class="display-value">0</span>
-            </div>
-        </div>
-
-        <!-- Calculator Keypad -->
-        <div class="calc-keypad">
-            <!-- Row 1: Actions -->
-            <button class="btn action-btn" data-action="clear" id="key-clear">AC</button>
-            <button class="btn action-btn" data-action="backspace" id="key-backspace" aria-label="Backspace">
-                <i class="fa-solid fa-backspace"></i>
-            </button>
-            <button class="btn action-btn" data-action="parentheses" id="key-parentheses">( )</button>
-            <button class="btn operator-btn" data-action="operator" data-val="/" id="key-divide">÷</button>
-
-            <!-- Row 2: 7, 8, 9, * -->
-            <button class="btn num-btn" data-val="7">7</button>
-            <button class="btn num-btn" data-val="8">8</button>
-            <button class="btn num-btn" data-val="9">9</button>
-            <button class="btn operator-btn" data-action="operator" data-val="*" id="key-multiply">×</button>
-
-            <!-- Row 3: 4, 5, 6, - -->
-            <button class="btn num-btn" data-val="4">4</button>
-            <button class="btn num-btn" data-val="5">5</button>
-            <button class="btn num-btn" data-val="6">6</button>
-            <button class="btn operator-btn" data-action="operator" data-val="-" id="key-subtract">−</button>
-
-            <!-- Row 4: 1, 2, 3, + -->
-            <button class="btn num-btn" data-val="1">1</button>
-            <button class="btn num-btn" data-val="2">2</button>
-            <button class="btn num-btn" data-val="3">3</button>
-            <button class="btn operator-btn" data-action="operator" data-val="+" id="key-add">+</button>
-
-            <!-- Row 5: %, 0, ., = -->
-            <button class="btn action-btn" data-action="percent" id="key-percent">%</button>
-            <button class="btn num-btn" data-val="0">0</button>
-            <button class="btn action-btn" data-action="decimal" id="key-decimal">.</button>
-            <button class="btn equals-btn" data-action="calculate" id="key-equals">=</button>
-        </div>
-
-        <!-- History Sliding Panel -->
-        <div class="history-panel" id="history-panel">
-            <div class="history-header">
-                <h3>Calculation History</h3>
-                <div class="history-actions">
-                    <button id="clear-history" class="text-btn" title="Clear History">Clear All</button>
-                    <button id="close-history" class="icon-btn" aria-label="Close History"><i class="fa-solid fa-times"></i></button>
-                </div>
-            </div>
-            <div class="history-list-container">
-                <ul id="history-list" class="history-list">
-                    <!-- History entries populated by JS -->
-                    <li class="history-empty">No history yet</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Notification Toast for errors or info -->
-    <div id="toast" class="toast"></div>
-
-    <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
