@@ -404,6 +404,7 @@ function App() {
             <i className="fa-solid fa-sun light-icon"></i>
             <i className="fa-solid fa-moon dark-icon"></i>
           </button>
+          <h2>STELLAR.CALC</h2>
           <div className="logo">STELLAR.CALC</div>
           <button 
             id="history-toggle" 
